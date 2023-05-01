@@ -375,3 +375,63 @@ form button {
 form button:hover {
     background-color: var(--tertiary-color);
 }
+
+.avaliacoes-container {
+    background-color: var(--bg-color);
+    padding: 2.5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: end;
+}
+
+.avaliacoes-wrapper {
+    width: 100%;
+    display: flex;
+    gap: 2rem;
+    justify-content: space-between;
+}
+
+.avaliacao-conteudo {
+    max-width: 36rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1.2rem;
+}
+
+.avl-header {
+    display: flex;
+    gap: 2rem;
+    align-items: center;
+}
+
+.avl-header span {
+    font-weight: 700;
+    font-size: 2.3rem;
+}
+
+.data {
+    text-align: right;
+}
+
+.classificacao {
+    margin: auto;
+}
+
+.avaliacoes-container button {
+    margin-top: 2rem;
+    padding: 1rem;
+    background-color: var(--secondary-color);
+    font-weight: 700;
+    font-size: 1.5rem;
+    line-height: 2.7rem;
+    color: var(--font-light-color);
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+.avaliacoes-container button:hover {
+    background-color: var(--tertiary-color);
+}
