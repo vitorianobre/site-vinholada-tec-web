@@ -299,3 +299,32 @@ main {
     text-decoration: none;
     color: inherit;
 }
+
+.posts {
+    display: flex;
+    gap: 3rem;
+    justify-content: space-between;
+}
+
+.post-container {
+    padding: 3rem;
+    max-width: 40rem;
+    min-height: 32rem;
+    background-color: var(--bg-color);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+.post-container h2 {
+    text-align: center;
+}
+
+.post-container p {
+    font-size: 1.5rem;
+    text-align: justify;
+}
+
+.post-container a {
+    color: inherit;
+}
