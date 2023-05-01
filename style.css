@@ -576,3 +576,33 @@ form button:hover {
     grid-row-start: 1;
     grid-row-end: 4;
 }
+
+footer {
+    background-color: var(--primary-color);
+    padding: 2rem;
+    min-height: 12rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    align-items: center;
+    justify-content: center;
+    color: var(--font-light-color);
+}
+
+.icons {
+    display: flex;
+    gap: 2.5rem;
+}
+
+.icons a svg path {
+    fill: var(--font-light-color);
+}
+
+.links-footer {
+    display: flex;
+    gap: 1.2rem;
+}
+
+.links-footer a {
+    color: inherit;
+}
