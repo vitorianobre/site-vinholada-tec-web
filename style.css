@@ -36,7 +36,7 @@ header {
 }
 
 #logo {
-    width: 10rem;
+    width: 15rem;
 }
 
 header nav {
@@ -164,6 +164,7 @@ main {
     grid-column-end: 2;
     grid-row-start: 2;
     grid-row-end: 4;
+    overflow: hidden;
 }
 
 .melhores {
@@ -253,8 +254,8 @@ main {
 }
 
 .wrapper-vinho {
-    max-width: 21rem;
-    min-height: 28rem;
+    max-width: 30rem;
+    min-height: 25rem;
     padding: 2.5rem;
     display: flex;
     flex-direction: column;
@@ -276,6 +277,24 @@ main {
     text-align: center;
     color: inherit;
     text-decoration: none;
+}
+
+.wrapper-vinho img{
+    width: 20rem;
+    height: 15rem;
+}
+
+@keyframes slide {
+    63% {
+        transform: translateX(-292%);
+    }
+    63.01% {
+        transform: translateX(92%);
+    }
+}
+  
+.conheca-container  {
+    animation: slide 18s linear infinite; 
 }
 
 .melhores-container {
