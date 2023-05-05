@@ -111,7 +111,20 @@ main {
 }
 
 @media (min-width:320px){
-
+    .nav-link{
+        display: none;
+    }
+    .pesquisa{
+        display: none;
+    }
+    .button-respo{
+        display: flex;
+    }
+    #logo{
+        content: url('assets/logo.png');
+        margin-left: -7rem;
+        margin-top: 1rem;
+    }
 }
 @media (min-width:768px){
     .nav-link{
@@ -123,6 +136,11 @@ main {
     .button-respo{
         display: flex;
     }
+    #logo{
+        content: url('assets/logo1.png');
+        margin-left: -7rem;
+        margin-top: 1rem;
+    }
 }
 @media (min-width:1024px){
     .nav-link{
@@ -130,6 +148,14 @@ main {
     }
     .pesquisa{
         display: flex;
+    }
+    .button-respo{
+        display: none;
+    }
+    #logo{
+        content: url('assets/logo1.png');
+        margin-left: -4rem;
+        margin-top: 1rem;
     }
 }
 
@@ -334,7 +360,33 @@ main {
 }
 /* Info 1 */
 @media (min-width:320px){
-
+    .info1{
+        justify-content: center;
+    }
+    .destaque{
+        grid-row-start: 1;
+        grid-column-start: 1;
+        grid-column-end: 4;
+    }
+    .wrapper-conteudo{
+        display: grid;
+        grid-template-columns: 1fr;
+    }
+    .social{
+        grid-row-start: 2;
+        grid-column-start: 1;
+        grid-column-end: 4;
+    }
+    .melhores{
+        grid-row-start: 3;
+        grid-column-start: 1;
+        grid-column-end: 4;
+    }
+    .conheca-tambem{
+        grid-row-start: 4;    
+        grid-column-start: 1;
+        grid-column-end: 4;    
+    }
 }
 @media (min-width:768px){
     .info1{
@@ -461,6 +513,13 @@ form button:hover {
     background-color: var(--tertiary-color);
 }
 
+@media (min-width:320px) and (max-width:767px){
+    .contato{
+        display: grid;
+        grid-template-columns: 1fr;
+    }
+}
+
 .avaliacoes-container {
     background-color: var(--bg-color);
     padding: 2.5rem;
@@ -520,6 +579,13 @@ form button:hover {
 
 .avaliacoes-container button:hover {
     background-color: var(--tertiary-color);
+}
+
+@media (min-width:320px) and (max-width:767px){
+    .avaliacoes-wrapper{
+        display: grid;
+        grid-template-columns: 1fr;
+    }
 }
 
 .info2 {
@@ -601,8 +667,34 @@ form button:hover {
 }
 
 /* Info 2 */
-@media (min-width:320px){
-
+@media (min-width:320px) and (max-width:767px){
+    .info2{
+        justify-content: center;
+        gap: 2rem;
+    }
+    .recomendacoes{
+        grid-row-start: 1;
+        grid-row-end: 2;
+        grid-column-start: 1;
+        grid-column-end: 4;
+    }
+    .recomendacoes .title{
+        font-size: 18px;
+    }
+    .recom-wrapper{
+        display: grid;
+        grid-template-columns: 1fr;
+    }
+    .sobre{
+        grid-row-start: 2;
+        grid-column-start: 1;
+        grid-column-end: 4;
+    }
+    .editorial{
+        grid-row-start: 3;
+        grid-column-start: 1;
+        grid-column-end: 4;
+    }
 }
 @media (min-width:768px){
     .info2{
