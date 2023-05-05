@@ -356,12 +356,13 @@ main {
 }
 
 .conheca-container {
-    animation: slide 18s linear infinite;
+    animation: slide 36s linear infinite;
 }
 /* Info 1 */
-@media (min-width:320px){
+@media (max-width:767px){
     .info1{
         justify-content: center;
+        grid-template-columns: repeat(4, 1fr);
     }
     .destaque{
         grid-row-start: 1;
@@ -378,19 +379,16 @@ main {
         grid-column-end: 4;
     }
     .melhores{
-        grid-row-start: 3;
-        grid-column-start: 1;
-        grid-column-end: 4;
+        grid-row-start: 4;
     }
     .conheca-tambem{
-        grid-row-start: 4;    
-        grid-column-start: 1;
-        grid-column-end: 4;    
+        grid-row-start: 2; 
     }
 }
-@media (min-width:768px){
+@media (max-width:1023px){
     .info1{
         grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(2, 1fr);
     }
     .destaque{
         grid-column-start: 1;
@@ -401,16 +399,17 @@ main {
     .conheca-tambem{
         grid-column-start: 1;
         grid-column-end: 4;
-        grid-row-start: 3;
+        grid-row-start: 2;
     }
     .melhores{
-        grid-column-start: 2;
-        grid-row-start: 2;
+        grid-column-start: 1;
+        grid-column-end: 4;
+        grid-row-start: 4;
     }
     .social{
         grid-column-start: 1;
-        grid-column-end: 2;
-        grid-row-start: 2;
+        grid-column-end: 4;
+        grid-row-start: 3;
     }
 }
 
@@ -465,6 +464,12 @@ main {
     color: inherit;
 }
 
+@media (max-width:767px){
+    .posts{
+        display: grid;
+    }
+}
+
 form {
     background-color: var(--bg-color);
     padding: 2.5rem 4rem;
@@ -513,7 +518,7 @@ form button:hover {
     background-color: var(--tertiary-color);
 }
 
-@media (min-width:320px) and (max-width:767px){
+@media (max-width:767px){
     .contato{
         display: grid;
         grid-template-columns: 1fr;
@@ -581,7 +586,7 @@ form button:hover {
     background-color: var(--tertiary-color);
 }
 
-@media (min-width:320px) and (max-width:767px){
+@media (max-width:767px){
     .avaliacoes-wrapper{
         display: grid;
         grid-template-columns: 1fr;
@@ -667,14 +672,14 @@ form button:hover {
 }
 
 /* Info 2 */
-@media (min-width:320px) and (max-width:767px){
+@media (max-width:767px){
     .info2{
         justify-content: center;
-        gap: 2rem;
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr;
     }
     .recomendacoes{
         grid-row-start: 1;
-        grid-row-end: 2;
         grid-column-start: 1;
         grid-column-end: 4;
     }
@@ -684,30 +689,31 @@ form button:hover {
     .recom-wrapper{
         display: grid;
         grid-template-columns: 1fr;
+        justify-content: center;
     }
     .sobre{
-        grid-row-start: 2;
         grid-column-start: 1;
         grid-column-end: 4;
+        grid-row-start: 2;
     }
     .editorial{
-        grid-row-start: 3;
         grid-column-start: 1;
         grid-column-end: 4;
+        grid-row-start: 3;
     }
 }
-@media (min-width:768px){
+@media (max-width:1023px){
     .info2{
         grid-template-columns: repeat(2, 1fr);
     }
     .sobre{
         grid-column-start: 1;
         grid-column-end: 2;
-        grid-row-start: 1;
+        grid-row-start: 2;
     }
     .editorial{
         grid-column-start: 2;
-        grid-row-start: 1;
+        grid-row-start: 2;
         grid-row-end: 2;
     }
     .editorial-container{
@@ -717,7 +723,8 @@ form button:hover {
     .recomendacoes{
         grid-column-start: 1;
         grid-column-end: 4;
-        grid-row-start: 2;
+        grid-row-start: 1;
+        grid-row-end: 2;
     }
 }
 
@@ -781,6 +788,37 @@ form button:hover {
     grid-column-end: 4;
     grid-row-start: 1;
     grid-row-end: 4;
+}
+
+@media (max-width:767px){
+    .galeria{
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr 1fr 1fr 2fr;
+    }
+    #galeria2{
+        grid-row-start: 1;
+        grid-row-end: 2;
+        grid-column-start: 1;
+    }
+    #galeria3{
+        grid-row-start: 2;
+        grid-row-end: 3;
+        grid-column-start: 1;
+    }
+    #galeria4{
+        grid-row-start: 3;
+        grid-row-end: 4;
+        grid-column-start: 1;
+    }
+    #galeria1{
+        grid-row-start: 4;
+        grid-column-start: 1;
+        grid-column-end: 2;
+    }
+    #galeria5{
+        grid-row-start: 4;
+        grid-column-start: 2;
+    }
 }
 
 footer {
