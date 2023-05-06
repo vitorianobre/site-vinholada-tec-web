@@ -23,10 +23,11 @@ body {
     font-family: var(--font-text);
     font-size: 1.6rem;
     color: var(--tertiary-color);
+    overflow-x: hidden;
 }
 
 header {
-    padding: 0 0 0 5rem;
+    padding: 1rem 0 1rem 3rem;
     height: 10rem;
     display: flex;
     gap: 10px;
@@ -36,13 +37,14 @@ header {
 }
 
 #logo {
-    width: 15rem;
+    max-height: 100%;
 }
 
 header nav {
     display: flex;
     gap: 5rem;
     align-items: center;
+    margin-right: -2rem;
 }
 
 header nav ul {
@@ -58,6 +60,10 @@ header nav ul li a {
 
 header nav ul li a:hover {
     font-weight: bold;
+}
+
+.button-respo {
+    display: none;
 }
 
 /* Barra de pesquisa */
@@ -92,71 +98,36 @@ header nav ul li a:hover {
     background-color: var(--tertiary-color);
 }
 
+@media screen and (max-width: 1023px) {
+    header nav ul,
+    .pesquisa {
+        display: none;
+    }
+
+    header nav {
+        margin-right: 3rem;
+    }
+
+    .button-respo {
+        display: block;
+        background-color: transparent;
+        border: none;
+        color: var(--bg-color);
+        font-size: 2.7rem;
+    }
+}
+
+@media screen and (max-width: 720px) {
+    header {
+        height: 8rem;
+    }
+}
+
 main {
     padding: 2.2rem 3rem;
     display: flex;
     flex-direction: column;
     gap: 2.2rem;
-}
-
-.button-respo{
-    background-color: transparent;
-    border: none;
-    color: var(--bg-color);
-    font-size: 2.7rem;
-    position: absolute;
-    right: 4rem;
-    top: 3rem;
-    display: none;
-}
-
-@media (min-width:320px){
-    .nav-link{
-        display: none;
-    }
-    .pesquisa{
-        display: none;
-    }
-    .button-respo{
-        display: flex;
-    }
-    #logo{
-        content: url('assets/logo.png');
-        margin-left: -7rem;
-        margin-top: 1rem;
-    }
-}
-@media (min-width:768px){
-    .nav-link{
-        display: none;
-    }
-    .pesquisa{
-        display: none;
-    }
-    .button-respo{
-        display: flex;
-    }
-    #logo{
-        content: url('assets/logo1.png');
-        margin-left: -7rem;
-        margin-top: 1rem;
-    }
-}
-@media (min-width:1024px){
-    .nav-link{
-        display: flex;
-    }
-    .pesquisa{
-        display: flex;
-    }
-    .button-respo{
-        display: none;
-    }
-    #logo{
-        content: url('assets/logo1.png');
-        margin-left: -4rem;
-        margin-top: 1rem;
-    }
 }
 
 /* Slider */
@@ -180,22 +151,6 @@ main {
 
 .slider>.slider-content>.slider-item img {
     width: 100%;
-}
-
-.slider>input:nth-child(1):checked~.slider-content {
-    transform: translateX(0%);
-}
-
-.slider>input:nth-child(2):checked~.slider-content {
-    transform: translateX(-100%);
-}
-
-.slider>input:nth-child(3):checked~.slider-content {
-    transform: translateX(-200%);
-}
-
-.slider>input:nth-child(4):checked~.slider-content {
-    transform: translateX(-300%);
 }
 
 .info1 {
@@ -306,12 +261,16 @@ main {
     color: inherit;
 }
 
+.bg-conheca {
+    background-color: var(--bg-color);
+}
+
 .conheca-container {
     padding: 2rem;
     display: flex;
     justify-content: space-between;
     gap: 1rem;
-    background-color: var(--bg-color);
+    animation: slide 36s linear infinite;
 }
 
 .wrapper-vinho {
@@ -355,9 +314,6 @@ main {
     }
 }
 
-.conheca-container {
-    animation: slide 36s linear infinite;
-}
 /* Info 1 */
 @media (max-width:767px){
     .info1{
